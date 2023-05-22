@@ -5,9 +5,9 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
+const namePrefix = "Emoji Faces";
+const description = "Emoji faces NFT colletion , mint and earn";
+const baseUri = "https://gateway.pinata.cloud/ipfs/QmVNrdms5VHzhtqEYWgj18PypjnGKM7p5vXezutgAHT1k9/";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -24,15 +24,13 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 50,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Backgraounds" },
+      { name: "Left Eye" },
+      { name: "Right Eye" },
+      { name: "Mounth" }
+      
     ],
   },
 ];
@@ -42,13 +40,13 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 500,
+  height: 500,
   smoothing: false,
 };
 
 const gif = {
-  export: false,
+  export: true,
   repeat: 0,
   quality: 100,
   delay: 500,
@@ -67,12 +65,13 @@ const text = {
   spacer: " => ",
 };
 
+
 const pixelFormat = {
   ratio: 2 / 128,
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
   static: false,
   default: "#000000",
